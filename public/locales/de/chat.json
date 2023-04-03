@@ -12,7 +12,7 @@
   "Conversation": "Konversation",
   "OR": "ODER",
   "Loading...": "Laden...",
-  "Type a message...": "Schreibe eine Nachricht...",
+  "Type a message or type / to select a prompt...": "Geben Sie eine Nachricht ein oder tippen Sie '/', um eine Prompt auszuwählen...",
   "Error fetching models.": "Fehler beim Abrufen der Sprachmodelle.",
   "AI": "KI",
   "You": "Du",

@@ -8,7 +8,7 @@ import { SidebarButton } from '../Sidebar/SidebarButton';
 import { ClearConversations } from './ClearConversations';
 
 interface Props {
-  lightMode: 'light' | 'dark';
+  lightMode: 'light';
   apiKey: string;
   conversationsCount: number;
   onToggleLightMode: (mode: 'light' | 'dark') => void;
@@ -43,7 +43,7 @@ export const ChatbarSettings: FC<Props> = ({
         onClick={() => onExportConversations()}
       />
 
-      <SidebarButton
+      {/* <SidebarButton
         text={lightMode === 'light' ? t('Dark mode') : t('Light mode')}
         icon={
           lightMode === 'light' ? <IconMoon size={18} /> : <IconSun size={18} />
@@ -51,9 +51,9 @@ export const ChatbarSettings: FC<Props> = ({
         onClick={() =>
           onToggleLightMode(lightMode === 'light' ? 'dark' : 'light')
         }
-      />
+      /> */}
 
-      <Key apiKey={apiKey} onApiKeyChange={onApiKeyChange} />
+      {/* <Key apiKey={apiKey} onApiKeyChange={onApiKeyChange} /> */}
     </div>
   );
 };
