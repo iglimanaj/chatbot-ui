@@ -11,7 +11,7 @@ interface Props {
   lightMode: 'light';
   apiKey: string;
   conversationsCount: number;
-  onToggleLightMode: (mode: 'light' | 'dark') => void;
+  onToggleLightMode: (mode: 'light') => void;
   onApiKeyChange: (apiKey: string) => void;
   onClearConversations: () => void;
   onExportConversations: () => void;

@@ -51,7 +51,7 @@ const Home: React.FC<HomeProps> = ({
 
   const [apiKey, setApiKey] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [lightMode, setLightMode] = useState<'dark' | 'light'>('dark');
+  const [lightMode, setLightMode] = useState<'light'>('light');
   const [messageIsStreaming, setMessageIsStreaming] = useState<boolean>(false);
 
   const [modelError, setModelError] = useState<ErrorMessage | null>(null);
@@ -273,7 +273,7 @@ const Home: React.FC<HomeProps> = ({
 
   // BASIC HANDLERS --------------------------------------------
 
-  const handleLightMode = (mode: 'dark' | 'light') => {
+  const handleLightMode = (mode: 'light') => {
     setLightMode(mode);
     localStorage.setItem('theme', mode);
   };
@@ -558,7 +558,7 @@ const Home: React.FC<HomeProps> = ({
   useEffect(() => {
     const theme = localStorage.getItem('theme');
     if (theme) {
-      setLightMode(theme as 'dark' | 'light');
+      setLightMode(theme as 'light');
     }
 
     const apiKey = localStorage.getItem('apiKey');
