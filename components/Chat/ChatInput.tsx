@@ -205,6 +205,17 @@ export const ChatInput: FC<Props> = ({
   };
 
   useEffect(() => {
+    window.addEventListener("message", function(event) {
+      if (event.data) {
+        const parsedString = JSON.parse(event.data);
+        const preComputedText = `${parsedString.text}\n\n${parsedString.query}`;
+
+        setContent(preComputedText);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     if (promptListRef.current) {
       promptListRef.current.scrollTop = activePromptIndex * 30;
     }
