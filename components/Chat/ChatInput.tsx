@@ -208,7 +208,12 @@ export const ChatInput: FC<Props> = ({
     window.addEventListener("message", function(event) {
       if (event.data) {
         const parsedString = JSON.parse(event.data);
-        const preComputedText = `${parsedString.text}\n\n${parsedString.query}`;
+        let preComputedText;
+        if (parsedString.text) {
+          preComputedText = `${parsedString.text}\n\n${parsedString.query}`;
+        } else {
+          preComputedText = `${parsedString.query}`;
+        }
 
         setContent(preComputedText);
       }
